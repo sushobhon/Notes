@@ -314,8 +314,18 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-agents" id="toc-why-agents" class="nav-link active" data-scroll-target="#why-agents">Why Agents?</a></li>
+  <li><a href="#what-is-agent" id="toc-what-is-agent" class="nav-link" data-scroll-target="#what-is-agent">What is Agent?</a>
+  <ul class="collapse">
+  <li><a href="#core-components-of-an-ai-agent" id="toc-core-components-of-an-ai-agent" class="nav-link" data-scroll-target="#core-components-of-an-ai-agent">Core Components of an AI Agent</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -325,8 +335,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="why-agents" class="level2">
+<h2 class="anchored" data-anchor-id="why-agents">Why Agents?</h2>
+<p>Large Language Model (<strong>LLM</strong>s) are powerful at generating text and answering questions, but they are fundamentally <em>reactive</em> - they respond only when prompted and have no memory, goals, or ability to take actions on their own. Agentic AI builds on LLMs by giving them the capability to reason over multiple steps, maintain context, make decisions, and interact with external tools or environments autonomously.</p>
+<p>For example, while a standard LLM can tell you today’s weather <em>if you provide the data</em>, an AI agent can <strong>decide</strong> to featch live weather information from an API, compare it with past data, and then suggest the best day for your picnic - all without further prompting.</p>
+<p>This note provides a hands-on jurney into Agentic AI, blending concepts with real coding examples to show how agency transforms an LLM into an active problem-solver.</p>
+</section>
+<section id="what-is-agent" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-agent">What is Agent?</h2>
+<p>An <strong>Agent</strong> in AI is a system that can <strong>perceive, reason,</strong> and <strong>act</strong> in pursuit of a goal - often autonomously and continuously. Unlike a plain LLM, which waits for a user prompt and responds, an agent can decide <em>what to do next</em> based on its objectives and the information it gathers.</p>
+<p>In the context of <strong>Agentic AI</strong>, an agent is usually powered by an LLM but augmented with additional capabilities: memory, planning, and the ability to use tools or interact with the outside world.</p>
+<p><strong>Example:</strong> Imagine you want a “Travel Planning Agent.”</p>
+<ul>
+<li>A regular LLM can suggest an itinerary if you give it all the details.</li>
+<li>An <strong>Agent</strong> can:
+<ol type="1">
+<li>Ask you for your preferences (destination, budget, interests).</li>
+<li>Search for flights and hotels using APIs.</li>
+<li>Compare options and optimize for your constraints.</li>
+<li>Build a day-wise itinerary.</li>
+<li>Book reservations or send reminders.</li>
+<li>Save the plan and remind you before departure.</li>
+</ol></li>
+</ul>
+<p>All of this can happen through multiple steps without you re-prompting it each time.</p>
+<section id="core-components-of-an-ai-agent" class="level3">
+<h3 class="anchored" data-anchor-id="core-components-of-an-ai-agent">Core Components of an AI Agent</h3>
+<ol type="1">
+<li><strong>Goal/Objective:</strong> - The desied outcome the agent works toward.</li>
+<li><strong>Perception/India Interface:</strong> - How the agent fathers information (e.g.&nbsp;User prompts, sensors, APIs).</li>
+<li><strong>Reasoning &amp; Planning Module:</strong> – Logic (often powered by an LLM) that decides what actions to take and in what sequence.</li>
+<li><strong>Memory:</strong> – Stores past interactions, facts, and context for long-term or short-term use.</li>
+<li><strong>Action Interface / Tools:</strong> – APIs, databases, or external systems the agent can call to perform tasks.</li>
+<li><strong>Feedback Loop:</strong> – Ability to evaluate results, adjust the plan, and try again if needed.</li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
