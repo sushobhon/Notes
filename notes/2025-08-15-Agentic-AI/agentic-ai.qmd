@@ -1,0 +1,16 @@
+---
+title: "Agentic AI: A Hands-on Guide"
+from: markdown+emoji
+description: "A Hands-on Guide on Agentic AI using free resources"
+author:
+  - name: Sushobhon Karmakar 
+date: 08-10-2025
+categories: [Agentic AI, Gen AI]
+# image: "llm-model.png"
+draft: False
+execute:
+  eval: false  # This is the key line
+  echo: true   # This ensures the code blocks are still displayed
+---
+
+

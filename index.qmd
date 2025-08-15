@@ -1,5 +1,13 @@
-# Preface {.unnumbered}
+---
+title: "Welcome to My Notes"
+---
 
-This is a Quarto book.
+# Welcome
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This is my personal collection of notes.  
+Use the navigation bar to explore.
+
+## About This Site
+
+- Built with [Quarto](https://quarto.org/)
+- Hosted on GitHub Pages

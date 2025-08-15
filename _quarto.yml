@@ -1,25 +1,30 @@
 project:
-  type: book
+  type: website
+  output-dir: docs
 
-book:
-  title: "Agentic AI"
-  author: "Norah Jones"
-  date: "15/8/2025"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+website:
+  title: "My Notes"
+  search: true
 
-bibliography: references.bib
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Home"
+      - href: notes/index.qmd
+        text: "Notes"
+        # menu:
+        #   - href: notes/agentic-ai.qmd
+        #     text: "Agentic AI"
+
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
-  pdf:
-    documentclass: scrreprt
-
-
-
+      light: flatly
+      dark: darkly
+    toc: true
+    html-math-method: katex
+    code-block-bg: true
+    code-block-border-left: true
+    highlight-style: atom-one
+    code-line-numbers: true
