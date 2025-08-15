@@ -13,4 +13,37 @@ execute:
   echo: true   # This ensures the code blocks are still displayed
 ---
 
+## Why Agents?
+Large Language Model (**LLM**s) are powerful at generating text and answering questions, but they are fundamentally *reactive* - they respond only when prompted and have no memory, goals, or ability to take actions on their own. Agentic AI builds on LLMs by giving them the capability to reason over multiple steps, maintain context, make decisions, and interact with external tools or environments autonomously.
 
+For example, while a standard LLM can tell you today's weather *if you provide the data*, an AI agent can **decide** to featch live weather information from an API, compare it with past data, and then suggest the best day for your picnic - all without further prompting.
+
+This note provides a hands-on jurney into Agentic AI, blending concepts with real coding examples to show how agency transforms an LLM into an active problem-solver.
+
+## What is Agent?
+
+An **Agent** in AI is a system that can **perceive, reason,** and **act** in pursuit of a goal - often autonomously and continuously. Unlike a plain LLM, which waits for a user prompt and responds, an agent can decide *what to do next* based on its objectives and the information it gathers.
+
+In the context of **Agentic AI**, an agent is usually powered by an LLM but augmented with additional capabilities: memory, planning, and the ability to use tools or interact with the outside world.
+
+**Example:**
+Imagine you want a "Travel Planning Agent."
+
+- A regular LLM can suggest an itinerary if you give it all the details.
+- An **Agent** can:
+    1. Ask you for your preferences (destination, budget, interests).
+    2. Search for flights and hotels using APIs.
+    3. Compare options and optimize for your constraints.
+    4. Build a day-wise itinerary.
+    5. Book reservations or send reminders.
+    6. Save the plan and remind you before departure.
+
+All of this can happen through multiple steps without you re-prompting it each time.
+
+### Core Components of an AI Agent
+1. **Goal/Objective:** - The desied outcome the agent works toward.
+2. **Perception/India Interface:** - How the agent fathers information (e.g. User prompts, sensors, APIs).
+3. **Reasoning & Planning Module:** – Logic (often powered by an LLM) that decides what actions to take and in what sequence.
+4. **Memory:** – Stores past interactions, facts, and context for long-term or short-term use.
+5. **Action Interface / Tools:** – APIs, databases, or external systems the agent can call to perform tasks.
+6. **Feedback Loop:** – Ability to evaluate results, adjust the plan, and try again if needed.
