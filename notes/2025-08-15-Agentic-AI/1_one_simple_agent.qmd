@@ -1,0 +1,186 @@
+---
+title: "Agentic AI: A Simple Agent"
+from: markdown+emoji
+description: "Creating "
+author:
+  - name: Sushobhon Karmakar 
+date: 08-15-2025
+categories: [Agentic AI, Gen AI]
+# image: "llm-model.png"
+draft: False
+execute:
+  eval: false  # This is the key line
+  echo: true   # This ensures the code blocks are still displayed
+---
+
+## Introduction
+Let's create a simple **AI Agent** that will deside which tools to use based on the question. We have two tools or functioned defined -
+
+ 1. Calculator Tools 
+ 2. Wikipedia Search tools
+
+We will build a **simple Agent** that:
+
+- Reads your question.
+- Decides if it needs a calculator ot just reasoning
+- calls the right tool
+- Give us the answer.
+
+First Starting with creating tools
+
+## Defining Tools
+Importing `ollama` and `requests` packages
+```python
+# import Necessary Library
+import requests
+import ollama
+```
+First Defining a tool that evaluate Mathematical expression. Lets call it a Calculator tool.
+```python
+# 1. Simple calculator tool
+def calculator_tool(query):
+    """A simple calculator tool."""
+    try:
+        # Keep only numbers, operators, parentheses, and dots
+        cleaned_expr = query.split('=')[0]  # Remove anything after '='
+        cleaned_expr = "".join(cleaned_expr).strip()
+        return str(eval(cleaned_expr))
+    except Exception as e:
+        return f"Error in calculation: {e}"
+```
+Our second tool is wikipedia search tool, which extract data from wikipedia based on user question
+```python
+# 2. Wikipedia search tool
+def web_search(query):
+    url = "https://en.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "list": "search",
+        "srsearch": query,
+        "format": "json"
+    }
+    try:
+        response = requests.get(url, params=params)
+        data = response.json()
+        if "query" in data and "search" in data["query"]:
+            results = [item['snippet'] for item in data['query']['search']]
+            return "\n".join(results) if results else "No results found on Wikipedia."
+        else:
+            return "No results found."
+    except Exception as e:
+        return f"Error searching Wikipedia: {e}"
+```
+
+## Defining a Simple Agent
+
+This is a very simple use case of Agent. This Problem can also be solved without creating an Agent as well.
+
+Our probelm statment is to create an agent that deside which tool to use based on the question. For example, if the user ask *Who is the president of the USA?*, the agent will suggest to use wikipedia_search.
+
+Let's build the Agent and see
+
+```python
+def agent(query, model="llama3.2:latest"):
+    # Step 1: Ask the LLM to deside what to do
+    system_prompt = """
+    You are a helpful AI assistant. You can either perform calculations or search the web.
+    - CALCULATE: <math expression>
+    - SEARCH: <search query>
+    - ANSWER: <your answer>
+
+    Output ONLY one of the above actions on the FIRST line. 
+    Do not explain your reasoning. Do not add extra commentary.
+    
+    Example:
+    Q: What is 12*(5+2)?
+    A: CALCULATE: 12*(5+2)
+    
+    Q: Who is the president of the USA?
+    A: SEARCH: Who is the president of the USA?
+    
+    Q: Tell me a joke about Cats.
+    A: ANSWER: Sure, here is a joke:
+    """
+    decision_response = ollama.chat(
+        model=model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": query}
+        ]
+    )
+
+    decision = decision_response['message']['content'].strip()
+
+    # Normalize the decision
+    first_line = decision.split('\n')[0].strip()
+
+    # print(f"\tDecision made by LLM: {first_line}")
+
+    # STEP 2: Execute the decision
+    if "CALCULATE" in first_line:
+        expression = first_line.split("CALCULATE:", 1)[1].strip()
+        return calculator_tool(expression)
+    elif "SEARCH:" in first_line:
+        query = first_line.split("SEARCH:")[1].strip()
+        return web_search(query)
+    elif "ANSWER:" in first_line:
+        return first_line.split("ANSWER:")[1].strip()
+    else:
+        return "I didn't understand the instruction. Please try again with a clear command."
+```
+**Note:** *We are using `llama3.2:latest` model for the agent. Based on the model, we might need to change the prompt and how we are extracting the tool name.*
+
+## Calling Agent
+Let's call the Agent and see if this is working fine or not. First try to invoke calculator.
+```python
+print(agent("What is 15 * (3 + 2)?"))
+```
+Output is
+```text
+75
+```
+Next try to invoke wikipedia_search
+```python
+print(agent("Tell me about India"))
+```
+The output is
+```text
+India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area; the most populous country since 2023;
+Developmental Inclusive Alliance (INDIA) is a big tent multi-party political alliance of several political parties in India led by the country&#039;s largest opposition
+The economy of India is a developing mixed economy with a notable public sector in strategic sectors. It is the world&#039;s fourth-largest economy by nominal
+The Constitution of India is the supreme legal document of India, and the longest written national constitution in the world. The document lays down the
+India, colloquially called Tiraṅgā (the tricolour), is a horizontal rectangular tricolour flag, the colours being of India saffron, white and India green;
+India is the most populous country in the world, with one-sixth of the world&#039;s population. Between 1975 and 2010, the population doubled to 1.2 billion
+The Times of India (TOI) is an Indian English-language daily newspaper and digital news media owned and managed by the Times Group. It is the third-largest
+Languages of India belong to several language families, the major ones being the Indo-Aryan languages spoken by 78.05% of Indians and the Dravidian languages
+The president of India (ISO: Bhārata kē Rāṣṭrapati) is the head of state of the Republic of India. The president is the nominal head of the executive,
+between 2500 BCE and 1900 BCE in present-day Pakistan and north-western India. Early in the second millennium BCE, persistent drought caused the population
+```
+
+What if we are asking something that does not requir any tools. In that case based on the if condition LLM answer from its memory. For example,
+```python
+Tell me a joke about Books
+```
+The Output in this case is
+```text
+Why was the book sad? Because it had a bad chapter in its life!
+```
+
+## How this works
+The Agent works as follows:
+
+- The LLM acts as the **planner**.
+- It **decides which tool** to call based on your question.
+- Tools (calculator, web search) are normal Python functions.
+- You can **add more tools** (database query, API calls, etc.).
+
+## Why This Is Agentic AI
+This is **not** just a chatbot - it's:
+
+- **Reasoning** (LLM deciding the next step)
+- **Acting** (calling a tool)
+- **Observing** (getting results back)
+
+Out of **all 4 key parts** of an Agent we have mentioned in last chapter this Agent has **LLM** and **Tools**.
+
+We will be adding **Memory** and **Looping** in subsequent chapters.

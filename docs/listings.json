@@ -1,15 +1,6 @@
 [
   {
-    "listing": "/notes.html",
-    "items": [
-      "/notes/index.html",
-      "/notes/2025-08-15-Agentic-AI/agentic-ai.html"
-    ]
-  },
-  {
     "listing": "/notes/index.html",
-    "items": [
-      "/notes/2025-08-15-Agentic-AI/agentic-ai.html"
-    ]
+    "items": []
   }
 ]

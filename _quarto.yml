@@ -1,21 +1,48 @@
+# project:
+#   type: website
+#   output-dir: docs
+
+# website:
+#   title: "My Notes"
+#   search: true
+
+#   navbar:
+#     left:
+#       - href: index.qmd
+#         text: "Home"
+#       - href: notes/index.qmd
+#         text: "Notes"
+#         # menu:
+#         #   - href: notes/agentic-ai.qmd
+#         #     text: "Agentic AI"
+
+
+# format:
+#   html:
+#     theme:
+#       light: flatly
+#       dark: darkly
+#     toc: true
+#     html-math-method: katex
+#     code-block-bg: true
+#     code-block-border-left: true
+#     highlight-style: atom-one
+#     code-line-numbers: true
+
+
+# For Books
 project:
-  type: website
+  type: book
   output-dir: docs
 
-website:
+book:
   title: "My Notes"
   search: true
 
-  navbar:
-    left:
-      - href: index.qmd
-        text: "Home"
-      - href: notes/index.qmd
-        text: "Notes"
-        # menu:
-        #   - href: notes/agentic-ai.qmd
-        #     text: "Agentic AI"
-
+  chapters:
+    - index.qmd
+    - notes/2025-08-15-Agentic-AI/agentic-ai.qmd  # Uncomment to include
+    - notes/2025-08-15-Agentic-AI/1_one_simple_agent.qmd  # Uncomment to include
 
 format:
   html:

@@ -1,58 +1,132 @@
 [
   {
-    "objectID": "notes/2025-08-15-Agentic-AI/agentic-ai.html",
-    "href": "notes/2025-08-15-Agentic-AI/agentic-ai.html",
-    "title": "Agentic AI: A Hands-on Guide",
-    "section": "",
-    "text": "Large Language Model (LLMs) are powerful at generating text and answering questions, but they are fundamentally reactive - they respond only when prompted and have no memory, goals, or ability to take actions on their own. Agentic AI builds on LLMs by giving them the capability to reason over multiple steps, maintain context, make decisions, and interact with external tools or environments autonomously.\nFor example, while a standard LLM can tell you today’s weather if you provide the data, an AI agent can decide to featch live weather information from an API, compare it with past data, and then suggest the best day for your picnic - all without further prompting.\nThis note provides a hands-on jurney into Agentic AI, blending concepts with real coding examples to show how agency transforms an LLM into an active problem-solver."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to My Notes",
+    "title": "My Notes",
     "section": "",
-    "text": "This is my personal collection of notes.\nUse the navigation bar to explore.\n\n\n\nBuilt with Quarto\nHosted on GitHub Pages"
+    "text": "1 Welcome\nThis is my personal collection of notes.\nUse the navigation bar to explore.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to My Notes</span>"
+    ]
   },
   {
     "objectID": "index.html#about-this-site",
     "href": "index.html#about-this-site",
-    "title": "Welcome to My Notes",
-    "section": "",
-    "text": "Built with Quarto\nHosted on GitHub Pages"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAll Notes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgentic AI: A Hands-on Guide\n\n\n\nAgentic AI\n\nGen AI\n\n\n\nA Hands-on Guide on Agentic AI using free resources\n\n\n\n\n\nAug 10, 2025\n\n\nSushobhon Karmakar\n\n\n\n\n\nNo matching items"
+    "title": "My Notes",
+    "section": "1.1 About This Site",
+    "text": "1.1 About This Site\n\nBuilt with Quarto\nHosted on GitHub Pages",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to My Notes</span>"
+    ]
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
-    "title": "All Notes",
+    "title": "2  All Notes",
     "section": "",
-    "text": "Agentic AI: A Hands-on Guide\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "No matching items",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>All Notes</span>"
+    ]
   },
   {
-    "objectID": "notes/2025-08-15-Agentic-AI/agentic-ai.html#core-components-of-an-ai-agent",
-    "href": "notes/2025-08-15-Agentic-AI/agentic-ai.html#core-components-of-an-ai-agent",
-    "title": "Agentic AI: A Hands-on Guide",
-    "section": "Core Components of an AI Agent",
-    "text": "Core Components of an AI Agent\n\nGoal/Objective: - The desied outcome the agent works toward.\nPerception/India Interface: - How the agent fathers information (e.g. User prompts, sensors, APIs).\nReasoning & Planning Module: – Logic (often powered by an LLM) that decides what actions to take and in what sequence.\nMemory: – Stores past interactions, facts, and context for long-term or short-term use."
-  },
-  {
-    "objectID": "notes/2025-08-15-Agentic-AI/agentic-ai.html#why-agents",
-    "href": "notes/2025-08-15-Agentic-AI/agentic-ai.html#why-agents",
-    "title": "Agentic AI: A Hands-on Guide",
+    "objectID": "notes/2025-08-15-Agentic-AI/agentic-ai.html",
+    "href": "notes/2025-08-15-Agentic-AI/agentic-ai.html",
+    "title": "2  Agentic AI",
     "section": "",
-    "text": "Large Language Model (LLMs) are powerful at generating text and answering questions, but they are fundamentally reactive - they respond only when prompted and have no memory, goals, or ability to take actions on their own. Agentic AI builds on LLMs by giving them the capability to reason over multiple steps, maintain context, make decisions, and interact with external tools or environments autonomously.\nFor example, while a standard LLM can tell you today’s weather if you provide the data, an AI agent can decide to featch live weather information from an API, compare it with past data, and then suggest the best day for your picnic - all without further prompting.\nThis note provides a hands-on jurney into Agentic AI, blending concepts with real coding examples to show how agency transforms an LLM into an active problem-solver."
+    "text": "2.1 Why Agents?\nLarge Language Model (LLMs) are powerful at generating text and answering questions, but they are fundamentally reactive - they respond only when prompted and have no memory, goals, or ability to take actions on their own. Agentic AI builds on LLMs by giving them the capability to reason over multiple steps, maintain context, make decisions, and interact with external tools or environments autonomously.\nFor example, while a standard LLM can tell you today’s weather if you provide the data, an AI agent can decide to featch live weather information from an API, compare it with past data, and then suggest the best day for your picnic - all without further prompting.\nThis note provides a hands-on jurney into Agentic AI, blending concepts with real coding examples to show how agency transforms an LLM into an active problem-solver.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Agentic AI</span>"
+    ]
   },
   {
     "objectID": "notes/2025-08-15-Agentic-AI/agentic-ai.html#what-is-agent",
     "href": "notes/2025-08-15-Agentic-AI/agentic-ai.html#what-is-agent",
-    "title": "Agentic AI: A Hands-on Guide",
-    "section": "What is Agent?",
-    "text": "What is Agent?\nAn Agent in AI is a system that can perceive, reason, and act in pursuit of a goal - often autonomously and continuously. Unlike a plain LLM, which waits for a user prompt and responds, an agent can decide what to do next based on its objectives and the information it gathers.\nIn the context of Agentic AI, an agent is usually powered by an LLM but augmented with additional capabilities: memory, planning, and the ability to use tools or interact with the outside world.\nExample: Imagine you want a “Travel Planning Agent.”\n\nA regular LLM can suggest an itinerary if you give it all the details.\nAn Agent can:\n\nAsk you for your preferences (destination, budget, interests).\nSearch for flights and hotels using APIs.\nCompare options and optimize for your constraints.\nBuild a day-wise itinerary.\nBook reservations or send reminders.\nSave the plan and remind you before departure.\n\n\nAll of this can happen through multiple steps without you re-prompting it each time.\n\nCore Components of an AI Agent\n\nGoal/Objective: - The desied outcome the agent works toward.\nPerception/India Interface: - How the agent fathers information (e.g. User prompts, sensors, APIs).\nReasoning & Planning Module: – Logic (often powered by an LLM) that decides what actions to take and in what sequence.\nMemory: – Stores past interactions, facts, and context for long-term or short-term use.\nAction Interface / Tools: – APIs, databases, or external systems the agent can call to perform tasks.\nFeedback Loop: – Ability to evaluate results, adjust the plan, and try again if needed."
+    "title": "2  Agentic AI",
+    "section": "2.2 What is Agent?",
+    "text": "2.2 What is Agent?\nThink of a normal LLM (like GPT-4, LLaMA, Mistral) as a very smart person who only answers your questions from memory.\nAn Agentic AI is like that smart person with internet, a calculator, an Excel sheet, and the ability to run code, look things up, and decide what to do next.\nAgentic AI adds:\n\nAutonomy → Can decide what steps to take without you telling every detail.\nTools → Can call functions/APIs (e.g., search the web, run Python, query databases).\nMemory → Can remember what happened before and use that knowledge later.\nPlanning → Can break down big goals into small steps.\n\n\n2.2.1 Key Parts of an Agent\nAn Agent usully has:\n\nLLM → Brain for reasoning and planning.\nTools → Functions it can call to act in the real world\nMemory → So it doesn’t forget past actions.\nLoop → Keeps running until the task is complete",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Agentic AI</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "",
+    "text": "3.1 Introduction\nLet’s create a simple AI Agent that will deside which tools to use based on the question. We have two tools or functioned defined -\nWe will build a simple Agent that:\nFirst Starting with creating tools",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#introduction",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#introduction",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "",
+    "text": "Calculator Tools\nWikipedia Search tools\n\n\n\nReads your question.\nDecides if it needs a calculator ot just reasoning\ncalls the right tool\nGive us the answer.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#defining-tools",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#defining-tools",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.2 Defining Tools",
+    "text": "3.2 Defining Tools\nImporting ollama and requests packages\n# import Necessary Library\nimport requests\nimport ollama\nFirst Defining a tool that evaluate Mathematical expression. Lets call it a Calculator tool.\n# 1. Simple calculator tool\ndef calculator_tool(query):\n    \"\"\"A simple calculator tool.\"\"\"\n    try:\n        # Keep only numbers, operators, parentheses, and dots\n        cleaned_expr = query.split('=')[0]  # Remove anything after '='\n        cleaned_expr = \"\".join(cleaned_expr).strip()\n        return str(eval(cleaned_expr))\n    except Exception as e:\n        return f\"Error in calculation: {e}\"\nOur second tool is wikipedia search tool, which extract data from wikipedia based on user question\n# 2. Wikipedia search tool\ndef web_search(query):\n    url = \"https://en.wikipedia.org/w/api.php\"\n    params = {\n        \"action\": \"query\",\n        \"list\": \"search\",\n        \"srsearch\": query,\n        \"format\": \"json\"\n    }\n    try:\n        response = requests.get(url, params=params)\n        data = response.json()\n        if \"query\" in data and \"search\" in data[\"query\"]:\n            results = [item['snippet'] for item in data['query']['search']]\n            return \"\\n\".join(results) if results else \"No results found on Wikipedia.\"\n        else:\n            return \"No results found.\"\n    except Exception as e:\n        return f\"Error searching Wikipedia: {e}\"",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#defining-a-simple-agent",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#defining-a-simple-agent",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.3 Defining a Simple Agent",
+    "text": "3.3 Defining a Simple Agent\nThis is a very simple use case of Agent. This Problem can also be solved without creating an Agent as well.\nOur probelm statment is to create an agent that deside which tool to use based on the question. For example, if the user ask Who is the president of the USA?, the agent will suggest to use wikipedia_search.\nLet’s build the Agent and see\ndef agent(query, model=\"llama3.2:latest\"):\n    # Step 1: Ask the LLM to deside what to do\n    system_prompt = \"\"\"\n    You are a helpful AI assistant. You can either perform calculations or search the web.\n    - CALCULATE: &lt;math expression&gt;\n    - SEARCH: &lt;search query&gt;\n    - ANSWER: &lt;your answer&gt;\n\n    Output ONLY one of the above actions on the FIRST line. \n    Do not explain your reasoning. Do not add extra commentary.\n    \n    Example:\n    Q: What is 12*(5+2)?\n    A: CALCULATE: 12*(5+2)\n    \n    Q: Who is the president of the USA?\n    A: SEARCH: Who is the president of the USA?\n    \n    Q: Tell me a joke about Cats.\n    A: ANSWER: Sure, here is a joke:\n    \"\"\"\n    decision_response = ollama.chat(\n        model=model,\n        messages=[\n            {\"role\": \"system\", \"content\": system_prompt},\n            {\"role\": \"user\", \"content\": query}\n        ]\n    )\n\n    decision = decision_response['message']['content'].strip()\n\n    # Normalize the decision\n    first_line = decision.split('\\n')[0].strip()\n\n    # print(f\"\\tDecision made by LLM: {first_line}\")\n\n    # STEP 2: Execute the decision\n    if \"CALCULATE\" in first_line:\n        expression = first_line.split(\"CALCULATE:\", 1)[1].strip()\n        return calculator_tool(expression)\n    elif \"SEARCH:\" in first_line:\n        query = first_line.split(\"SEARCH:\")[1].strip()\n        return web_search(query)\n    elif \"ANSWER:\" in first_line:\n        return first_line.split(\"ANSWER:\")[1].strip()\n    else:\n        return \"I didn't understand the instruction. Please try again with a clear command.\"\nNote: We are using llama3.2:latest model for the agent. Based on the model, we might need to change the prompt and how we are extracting the tool name.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#calling-agent",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#calling-agent",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.4 Calling Agent",
+    "text": "3.4 Calling Agent\nLet’s call the Agent and see if this is working fine or not. First try to invoke calculator.\nprint(agent(\"What is 15 * (3 + 2)?\"))\nOutput is\n75\nNext try to invoke wikipedia_search\nprint(agent(\"Tell me about India\"))\nThe output is\nIndia, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area; the most populous country since 2023;\nDevelopmental Inclusive Alliance (INDIA) is a big tent multi-party political alliance of several political parties in India led by the country&#039;s largest opposition\nThe economy of India is a developing mixed economy with a notable public sector in strategic sectors. It is the world&#039;s fourth-largest economy by nominal\nThe Constitution of India is the supreme legal document of India, and the longest written national constitution in the world. The document lays down the\nIndia, colloquially called Tiraṅgā (the tricolour), is a horizontal rectangular tricolour flag, the colours being of India saffron, white and India green;\nIndia is the most populous country in the world, with one-sixth of the world&#039;s population. Between 1975 and 2010, the population doubled to 1.2 billion\nThe Times of India (TOI) is an Indian English-language daily newspaper and digital news media owned and managed by the Times Group. It is the third-largest\nLanguages of India belong to several language families, the major ones being the Indo-Aryan languages spoken by 78.05% of Indians and the Dravidian languages\nThe president of India (ISO: Bhārata kē Rāṣṭrapati) is the head of state of the Republic of India. The president is the nominal head of the executive,\nbetween 2500 BCE and 1900 BCE in present-day Pakistan and north-western India. Early in the second millennium BCE, persistent drought caused the population\nWhat if we are asking something that does not requir any tools. In that case based on the if condition LLM answer from its memory. For example,\nTell me a joke about Books\nThe Output in this case is\nWhy was the book sad? Because it had a bad chapter in its life!",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#how-this-works",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#how-this-works",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.5 How this works",
+    "text": "3.5 How this works\nThe Agent works as follows:\n\nThe LLM acts as the planner.\nIt decides which tool to call based on your question.\nTools (calculator, web search) are normal Python functions.\nYou can add more tools (database query, API calls, etc.).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#section",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#section",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.6 ",
+    "text": "3.6",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
+  },
+  {
+    "objectID": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#why-this-is-agentic-ai",
+    "href": "notes/2025-08-15-Agentic-AI/1_one_simple_agent.html#why-this-is-agentic-ai",
+    "title": "3  Agentic AI: A Simple Agent",
+    "section": "3.6 Why This Is Agentic AI",
+    "text": "3.6 Why This Is Agentic AI\nThis is not just a chatbot - it’s:\n\nReasoning (LLM deciding the next step)\nActing (calling a tool)\nObserving (getting results back)\n\nOut of all 4 key parts of an Agent we have mentioned in last chapter this Agent has LLM and Tools.\nWe will be adding Memory and Looping in subsequent chapters.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Agentic AI: A Simple Agent</span>"
+    ]
   }
 ]
